@@ -1,0 +1,165 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+/* GLOBAL VARIABLES */
+:root {
+  /* PRIMARY COLORS */
+  --custom-blue: 228, 45%, 44%;
+  --red: 1, 90%, 64%;
+  --blue: 219, 85%, 26%;
+
+  /* NEUTRAL COLORS */
+  --white: 0, 0%, 100%;
+  --very-light-grayish-blue: 210, 60%, 98%;
+  --light-grayish-blue-1: 211, 68%, 94%;
+  --light-grayish-blue-2: 205, 33%, 90%;
+  --grayish-blue: 219, 14%, 63%;
+  --dark-grayish-blue: 219, 12%, 42%;
+  --very-dark-blue: 224, 21%, 14%;
+
+  /* FONT WEIGHT */
+  --bolder: 800;
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--very-light-grayish-blue));
+  gap: 2rem;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* COMPONENTS */
+.unread {
+  background-color: hsl(var(--very-light-grayish-blue));
+}
+
+.unread .text::after {
+  content: "";
+  display: inline-block;
+  background-color: hsl(var(--red));
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-left: 0.3rem;
+}
+
+.text {
+  color: hsl(var(--dark-grayish-blue));
+}
+
+.group,
+.name,
+.post {
+  cursor: pointer;
+}
+
+/* MAIN */
+.card {
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  max-width: calc(675em / 16);
+  width: 100%;
+  background-color: hsl(var(--white));
+  border-radius: 1rem;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.04);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.top .title {
+  font-size: 1.25rem;
+}
+
+.top .title .num {
+  background-color: hsl(var(--blue));
+  color: white;
+  padding: 0.1rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.notif {
+  display: flex;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.notif div:last-child {
+  flex-grow: 1;
+}
+
+.notif .comment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notif .avatar {
+  width: calc(42rem / 16);
+}
+
+.notif .name {
+  font-weight: var(--bolder);
+  color: hsl(var(--very-dark-blue));
+}
+
+.notif .message {
+  padding: 1rem;
+  border: 1px solid hsl(var(--light-grayish-blue-2));
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.notif .group {
+  color: hsl(var(--blue));
+  font-weight: var(--bolder);
+}
+
+.notif .post {
+  color: hsl(var(--dark-grayish-blue));
+  font-weight: var(--bolder);
+}
+
+.notif .time {
+  color: hsl(var(--grayish-blue));
+}
+
+/* FOOTER */
+.attribution {
+  font-size: calc(11rem / 16);
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(var(--custom-blue));
+}
