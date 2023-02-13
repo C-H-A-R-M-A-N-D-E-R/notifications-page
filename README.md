@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/c-h-a-r-m-a-n-d-e-r/notifications-page/tree/gh-pages)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/notification-page-VV8AFjtp98)
 - Live Site URL: [Website](https://c-h-a-r-m-a-n-d-e-r.github.io/notifications-page/)
 
 ## My process
